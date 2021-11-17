@@ -1,0 +1,21 @@
+<form>
+    <section class="content">
+        <h1>Faça seu login</h1>
+
+        <div>
+            <input #email="ngModel" type="text" [(ngModel)]="user.email" name="email" required placeholder="CPF">
+        </div>
+
+        <div>
+
+            <input style="margin-top: 50px;" #senha="ngModel" type="text" [(ngModel)]="user.senha" name="senha" required placeholder="Senha">
+        </div>
+
+        <div>
+            <button type="submit" [disabled]="email.invalid || senha.invalid">continuar</button>
+        </div>
+
+        <div class="help"><a href="">Esqueci minha senha ></a></div>
+        <div><a href="">Ainda não sou cliente ></a></div>
+    </section>
+</form>
